@@ -10,23 +10,21 @@ ENV TERM xterm
 ADD rootfs /
 CMD ["bash"]
 
-RUN apt-get update -y && \
-  apt-get upgrade -y && \
-  apt-get install -y \
+RUN apk update && \
+  apk upgrade && \
+  apk add \
     ca-certificates \
     bash \
     vim \
     curl \
     wget \
-    procps \
-    apt-utils \
-    apt-transport-https \
-    iputils-ping \
     bzip2 \
     unzip \
-    cron && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    ncurses \
+    tar \
+    shadow \
+    su-exec && \
+  rm -rf /var/cache/apk/*
 
 LABEL org.label-schema.version=$VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE
