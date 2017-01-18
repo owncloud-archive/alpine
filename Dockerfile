@@ -1,10 +1,6 @@
 FROM alpine:edge
 MAINTAINER ownCloud DevOps <devops@owncloud.com>
 
-ARG VERSION
-ARG BUILD_DATE
-ARG VCS_REF
-
 ENV TERM xterm
 
 ADD rootfs /
@@ -25,6 +21,10 @@ RUN apk update && \
     shadow \
     su-exec && \
   rm -rf /var/cache/apk/*
+
+ARG VERSION
+ARG BUILD_DATE
+ARG VCS_REF
 
 LABEL org.label-schema.version=$VERSION
 LABEL org.label-schema.build-date=$BUILD_DATE
