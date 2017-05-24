@@ -6,6 +6,7 @@ This is our minimal customized [Alpine](https://alpinelinux.org/) base image bas
 ## Versions
 
 * [latest](latest/)
+* [3.5](3.5/)
 
 
 ## Issues, Feedback and Ideas
