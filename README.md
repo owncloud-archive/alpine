@@ -7,6 +7,7 @@ This is our minimal customized [Alpine](https://alpinelinux.org/) base image bas
 
 * [latest](latest/)
 * [3.5](3.5/)
+* [edge](edge/)
 
 
 ## Issues, Feedback and Ideas

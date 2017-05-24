@@ -48,8 +48,8 @@ Fork -> Patch -> Push -> Pull Request
 
 ## Authors
 
-* [Felix Boehm](https://github.com/felixboehm)
 * [Thomas Boerger](https://github.com/tboerger)
+* [Felix Boehm](https://github.com/felixboehm)
 
 
 ## License
@@ -60,5 +60,5 @@ MIT
 ## Copyright
 
 ```
-Copyright (c) 2017 Felix Böhm <felix@owncloud.com>
+Copyright (c) 2017 Thomas Boerger <tboerger@owncloud.com>
 ```
