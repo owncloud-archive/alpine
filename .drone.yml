@@ -38,4 +38,5 @@ pipeline:
     pull: true
     secrets: [ slack_webhook ]
     channel: drone
+    when:
       status: [ changed, failure ]
