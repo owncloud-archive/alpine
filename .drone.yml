@@ -19,7 +19,6 @@ pipeline:
     pull: true
     secrets: [ docker_username, docker_password ]
     repo: owncloud/alpine
-    registry: registry.owncloud.com
     tags: [ latest ]
     when:
       event: [ push ]
