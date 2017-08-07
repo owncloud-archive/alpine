@@ -12,7 +12,7 @@ pipeline:
   tools:
     image: owncloud/alpine:latest
     commands:
-      bash update-tools.sh
+      - bash update-tools.sh
 
   docker:
     image: plugins/docker
