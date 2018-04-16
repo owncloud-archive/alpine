@@ -19,7 +19,8 @@ RUN apk update && \
     ncurses \
     tar \
     shadow \
-    su-exec && \
+    su-exec \
+    git && \
   rm -rf /var/cache/apk/*
 
 LABEL org.label-schema.version=latest
