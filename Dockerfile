@@ -1,5 +1,9 @@
 FROM alpine:edge
-MAINTAINER ownCloud DevOps <devops@owncloud.com>
+
+LABEL maintainer="ownCloud DevOps <devops@owncloud.com>" \
+  org.label-schema.name="ownCloud Alpine" \
+  org.label-schema.vendor="ownCloud GmbH" \
+  org.label-schema.schema-version="1.0"
 
 ENV TERM xterm
 
@@ -22,9 +26,3 @@ RUN apk update && \
     su-exec \
     git && \
   rm -rf /var/cache/apk/*
-
-LABEL org.label-schema.version=latest
-LABEL org.label-schema.vcs-url="https://github.com/owncloud-docker/alpine.git"
-LABEL org.label-schema.name="ownCloud Alpine"
-LABEL org.label-schema.vendor="ownCloud GmbH"
-LABEL org.label-schema.schema-version="1.0"
