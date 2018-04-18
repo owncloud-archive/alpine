@@ -1,0 +1,2 @@
+rootfs/usr/bin/dockerize
+rootfs/usr/bin/wait-for-it
