@@ -24,6 +24,7 @@ pipeline:
     repo: owncloud/alpine
     tags:
       - latest
+      - edge
     dry_run: true
     when:
       event: [ pull_request ]
@@ -35,6 +36,7 @@ pipeline:
     repo: owncloud/alpine
     tags:
       - latest
+      - edge
     when:
       event: [ push ]
 
