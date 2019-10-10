@@ -1,0 +1,18 @@
+image: owncloud/alpine:latest
+tags:
+  - edge
+manifests:
+  - image: owncloud/alpine:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: owncloud/alpine:arm64v8
+    platform:
+      architecture: arm64
+      variant: v8
+      os: linux
+  - image: owncloud/alpine:arm32v7
+    platform:
+      architecture: arm
+      variant: v7
+      os: linux
