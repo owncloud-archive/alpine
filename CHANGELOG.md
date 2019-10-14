@@ -1,5 +1,12 @@
 # Changelog
 
+## 2019-10-14
+
+* Fixed
+  * Downloaded tools got to be executable
+* Changed
+  * Replace wait-for-it with a static binary
+
 ## 2019-10-08
 
 * Changed
