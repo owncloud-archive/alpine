@@ -49,9 +49,14 @@ def docker(ctx, version, arch):
     platform = 'arm'
     variant = 'v7'
 
-  if ctx.build.event == "pull_request":
+  if ctx.build.ref == "refs/heads/master":
     settings = {
-      'dry_run': True,
+      'username': {
+        'from_secret': 'public_username',
+      },
+      'password': {
+        'from_secret': 'public_password',
+      },
       'tags': tag,
       'dockerfile': '%s/Dockerfile.%s' % (prefix, arch),
       'repo': 'owncloud/alpine',
@@ -59,12 +64,7 @@ def docker(ctx, version, arch):
     }
   else:
     settings = {
-      'username': {
-        'from_secret': 'public_username'
-      },
-      'password': {
-        'from_secret': 'public_password'
-      },
+      'dry_run': True,
       'tags': tag,
       'dockerfile': '%s/Dockerfile.%s' % (prefix, arch),
       'repo': 'owncloud/alpine',
