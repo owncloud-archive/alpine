@@ -117,6 +117,7 @@ def docker(ctx, version, arch):
           'dockerfile': '%s/Dockerfile.%s' % (suffix, arch),
           'repo': 'owncloud/alpine',
           'context': suffix,
+          'pull_image': False,
         },
         'volumes': [
           {
