@@ -1,4 +1,4 @@
-FROM amd64/alpine:3.10@sha256:acd3ca9941a85e8ed16515bfc5328e4e2f8c128caa72959a58a127b7801ee01f as build
+FROM amd64/alpine:3.10 as build
 
 ENV GOMPLATE_DOWNLOAD=https://github.com/hairyhenderson/gomplate/releases/download/v3.0.0/gomplate_linux-amd64-slim
 ENV GOMPLATE_CHECKSUM=ba6cf854da46f9d9a50d26ec7d4a8a8b24f65ecce54a8a93d23eb0b6e138d8eb
@@ -8,7 +8,7 @@ RUN cd /tmp && \
   echo "${GOMPLATE_CHECKSUM} *gomplate" | sha256sum -c - && \
   chmod +x gomplate
 
-FROM amd64/golang:1.13@sha256:a50a9364e9170ab5f5b03389ed33b9271b4a7b6bbb0ab41c4035adb3078927bc as golang
+FROM amd64/golang:1.13 as golang
 
 ENV CGO_ENABLED=0
 ENV WAIT_FOR_REPO=https://github.com/alioygur/wait-for
@@ -19,7 +19,7 @@ RUN git clone ${WAIT_FOR_REPO} /go/wait-for && \
   git checkout ${WAIT_FOR_COMMIT} && \
   go build -v -a -installsuffix cgo -o /tmp/wait-for
 
-FROM amd64/alpine:3.10@sha256:acd3ca9941a85e8ed16515bfc5328e4e2f8c128caa72959a58a127b7801ee01f
+FROM amd64/alpine:3.10
 
 LABEL maintainer="ownCloud DevOps <devops@owncloud.com>" \
   org.label-schema.name="ownCloud Alpine" \
