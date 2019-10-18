@@ -1,4 +1,4 @@
-FROM arm32v7/alpine:edge@sha256:b59cc32d2e7ebedf81d0614dd87a87c6f9f8d74b8418722a9a52adbe9eeb2b7a as build
+FROM arm32v7/alpine:edge as build
 
 ENV GOMPLATE_DOWNLOAD=https://github.com/hairyhenderson/gomplate/releases/download/v3.0.0/gomplate_linux-arm-slim
 ENV GOMPLATE_CHECKSUM=fb9bf19fb8e42aac690f724a3252bd5fe62322d620a8a1b1cb4308f6b684381c
@@ -19,7 +19,7 @@ RUN git clone ${WAIT_FOR_REPO} /go/wait-for && \
   git checkout ${WAIT_FOR_COMMIT} && \
   go build -v -a -installsuffix cgo -o /tmp/wait-for
 
-FROM arm32v7/alpine:edge@sha256:b59cc32d2e7ebedf81d0614dd87a87c6f9f8d74b8418722a9a52adbe9eeb2b7a
+FROM arm32v7/alpine:edge
 
 LABEL maintainer="ownCloud DevOps <devops@owncloud.com>" \
   org.label-schema.name="ownCloud Alpine" \
