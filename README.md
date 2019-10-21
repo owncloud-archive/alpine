@@ -1,6 +1,6 @@
 # ownCloud: Alpine
 
-[![Build Status](https://drone.owncloud.com/api/badges/owncloud-docker/alpine/status.svg)](https://drone.owncloud.com/owncloud-docker/alpine)
+[![Build Status](https://cloud.drone.io/api/badges/owncloud-docker/alpine/status.svg)](https://cloud.drone.io/owncloud-docker/alpine)
 [![](https://images.microbadger.com/badges/image/owncloud/alpine:latest.svg)](https://microbadger.com/images/owncloud/alpine:latest "Get your own image badge on microbadger.com")
 
 This is our minimal customized [Alpine](https://alpinelinux.org/) base image based on [official Alpine](https://registry.hub.docker.com/_/alpine/). It's used for many of our Docker images.
