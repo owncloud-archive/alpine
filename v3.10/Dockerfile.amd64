@@ -45,6 +45,7 @@ RUN apk update && \
     tar \
     shadow \
     su-exec \
+    jq \
     git && \
   rm -rf /var/cache/apk/*
 
